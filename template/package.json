@@ -17,6 +17,11 @@
     ]
   },
   {{/testing}}
+  "babel": {
+    "presets": [
+      ["env", { "modules": false }]
+    ]
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "vue": "^2.3.3"{{#router}},
