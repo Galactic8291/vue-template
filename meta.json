@@ -1,0 +1,37 @@
+{
+  "prompts": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": "Project name"
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "label": "Project description",
+      "default": "A Vue.js project"
+    },
+    "author": {
+      "type": "string",
+      "label": "Author"
+    },
+    "testing": {
+      "type": "confirm",
+      "message": "Install Ava + Avoriaz for testing?"
+    },
+    "router": {
+      "type": "confirm",
+      "message": "Install vue-router?"
+    },
+    "less": {
+      "type": "confirm",
+      "message": "Setup Less as pre-processor?"
+    }
+  },
+  "filters": {
+    "test/**/*": "testing",
+    "src/config/Router.js": "router"
+  },
+  "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev.{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev.{{/inPlace}}"
+}
+
