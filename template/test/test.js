@@ -2,7 +2,7 @@ import test from 'ava'
 import axios from 'axios'
 import { mount } from 'avoriaz'
 
-import Hello from './src/components/Hello'
+import Hello from '../src/components/Hello'
 
 test('test', t => {
   t.pass()
@@ -23,8 +23,9 @@ test('async test', async t => {
 
 test('test vue component', t => {
   const wrapper = mount(Hello)
-  const hello = wrapper.find(Hello)[0]
+  const msg = wrapper.data().msg
+  const text = wrapper.find('h1')[0].text()
 
-  t.true(hello.is(Hello))
+  t.is(msg, text)
 })
 
