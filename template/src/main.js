@@ -9,7 +9,7 @@ new Vue({
   {{#router}}
   router: Router,
   {{/router}}
-  el: '#app',
-  render: h => h(App)
+  template: '<App/>',
+  components: { App }
 })
 
