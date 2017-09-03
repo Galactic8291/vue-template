@@ -13,7 +13,7 @@
   {{#testing}}
   "ava": {
     "require": [
-      "./test/config/setup.js"
+      "./test/helpers/setup.js"
     ]
   },
   {{/testing}}
