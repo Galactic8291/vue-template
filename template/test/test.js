@@ -8,7 +8,7 @@ test('test', t => {
   t.pass()
 })
 
-test('async test', t => {
+test('async test', async t => {
   const promise = await axios.get('https://jsonplaceholder.typicode.com/posts/1')
   const data = promise.data
   const expected = {
