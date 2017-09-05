@@ -6,6 +6,7 @@ import Router from './config/Router'
 {{/router}}
 
 new Vue({
+  el: '#app',
   {{#router}}
   router: Router,
   {{/router}}
